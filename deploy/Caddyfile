@@ -1,0 +1,37 @@
+# Caddyfile - Configuracao de Proxy Reverso com HTTPS automatico (Let's Encrypt)
+# Substitua licitamais.seudominio.com.br pelo seu dominio ou subdominio real com DNS apontando para o IP da VPS.
+# Para testes apenas por IP sem HTTPS automatico, use: :80 { ... }
+
+licitamais.seudominio.com.br {
+    # Redireciona todas as requisicoes para o servidor Web do LicitamAIs na porta 8090
+    reverse_proxy 127.0.0.1:8090 {
+        header_up X-Forwarded-Proto {scheme}
+        header_up X-Real-IP {remote_host}
+        header_up Host {host}
+    }
+
+    # Compressao gzip/zstd
+    encode zstd gzip
+
+    # Cabecalhos recomendados de seguranca
+    header {
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "SAMEORIGIN"
+        Referrer-Policy "strict-origin-when-cross-origin"
+    }
+
+    # Logs de acesso
+    log {
+        output file /var/log/caddy/licitamais_access.log {
+            roll_size 10MiB
+            roll_keep 5
+            roll_keep_for 30d
+        }
+        format filter {
+            request>uri query {
+                replace t REDACTED
+            }
+        }
+    }
+}

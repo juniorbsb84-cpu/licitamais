@@ -1,0 +1,85 @@
+{
+ "url": "https://compras.somoscooperativismo.coop.br/compras/api/salaDisputaPublica/9da9d392-c001-4d4c-89bd-a1f0a2d025ab/listarSalaDisputaPublica?IdEdital=9da9d392-c001-4d4c-89bd-a1f0a2d025ab",
+ "status": 200,
+ "resposta": {
+  "Data": [
+   {
+    "Codigo": 46738,
+    "CodigoStatus": 2,
+    "CodigoTipoProcesso": 2,
+    "DescricaoStatus": "Fechado",
+    "Numero": 1,
+    "Paralisado": false,
+    "ValorMelhorLance": 418600.0,
+    "StatusLei123": 4,
+    "DescricaoStatusLei123": "Dispensado",
+    "ParticipacaoRestrita": false
+   },
+   {
+    "Codigo": 46739,
+    "CodigoStatus": 2,
+    "CodigoTipoProcesso": 2,
+    "DescricaoStatus": "Fechado",
+    "Numero": 2,
+    "Paralisado": false,
+    "ValorMelhorLance": 74700.0,
+    "StatusLei123": 4,
+    "DescricaoStatusLei123": "Dispensado",
+    "ParticipacaoRestrita": false
+   },
+   {
+    "Codigo": 46740,
+    "CodigoStatus": 2,
+    "CodigoTipoProcesso": 2,
+    "DescricaoStatus": "Fechado",
+    "Numero": 3,
+    "Paralisado": false,
+    "ValorMelhorLance": 17435.0,
+    "StatusLei123": 4,
+    "DescricaoStatusLei123": "Dispensado",
+    "ParticipacaoRestrita": false
+   },
+   {
+    "Codigo": 46741,
+    "CodigoStatus": 2,
+    "CodigoTipoProcesso": 2,
+    "DescricaoStatus": "Fechado",
+    "Numero": 4,
+    "Paralisado": false,
+    "ValorMelhorLance": 66267.0,
+    "StatusLei123": 4,
+    "DescricaoStatusLei123": "Dispensado",
+    "ParticipacaoRestrita": false
+   },
+   {
+    "Codigo": 46742,
+    "CodigoStatus": 2,
+    "CodigoTipoProcesso": 2,
+    "DescricaoStatus": "Fechado",
+    "Numero": 5,
+    "Paralisado": false,
+    "ValorMelhorLance": 88900.0,
+    "StatusLei123": 4,
+    "DescricaoStatusLei123": "Dispensado",
+    "ParticipacaoRestrita": false
+   },
+   {
+    "Codigo": 46743,
+    "CodigoStatus": 5,
+    "CodigoTipoProcesso": 2,
+    "DescricaoStatus": "Fracassado",
+    "Numero": 6,
+    "Paralisado": false,
+    "ValorMelhorLance": 0.0,
+    "StatusLei123": 4,
+    "DescricaoStatusLei123": "Dispensado",
+    "ParticipacaoRestrita": false
+   }
+  ],
+  "Pages": 1,
+  "RowsCount": 6,
+  "Page": 1,
+  "PageSize": 10,
+  "FirstRow": 0
+ }
+}

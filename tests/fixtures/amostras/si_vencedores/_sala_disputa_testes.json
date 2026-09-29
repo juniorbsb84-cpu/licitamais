@@ -1,0 +1,114 @@
+[
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/salaDisputaPublica/1b05ff48-33a5-4168-bafd-880e56f06a98/obterStatusEdital",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "www_authenticate": null,
+  "len": 2,
+  "text_head": "24"
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/salaDisputaPublica/1b05ff48-33a5-4168-bafd-880e56f06a98/sessaoPublicaAberta",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "www_authenticate": null,
+  "len": 5,
+  "text_head": "false"
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/salaDisputaPublica/1b05ff48-33a5-4168-bafd-880e56f06a98/sessaoPublicaAbertaOuFechada",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "www_authenticate": null,
+  "len": 4,
+  "text_head": "true"
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/salaDisputaPublica/1b05ff48-33a5-4168-bafd-880e56f06a98/obterDetalhesSalaDisputa",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "www_authenticate": null,
+  "len": 549,
+  "text_head": "{\"CodigoFase\":9,\"CodigoStatus\":24,\"CodigoModalidade\":5869,\"NomeFase\":\"Finalização\",\"NomeFaseReduzido\":\"Finalização\",\"NomeModalidade\":\"Cotação Eletrônica - com disputa\",\"NomeStatus\":\"Finalizado\",\"ObjetoLicitadoResumido\":\"Ac contratacao e necessaria para atender as demandas da 31 CONFERENCIA DAS PARTES DA CONVENCAO DAS NACOES UNIDAS SOBRE AS MUDANCAS CLIMATICAS  COP31, que acontecera em Antalia, na Turquia, no periodo de 9 a 20 de novembro de 2026.\",\"NumeroProcesso\":\"000004/2026\",\"NomeEmpresa\":\"Sistema Indústria\",\"NomesEmpresas\":[\"CNI\"]}"
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/salaDisputaPublica/1b05ff48-33a5-4168-bafd-880e56f06a98/ctxP",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "www_authenticate": null,
+  "len": 5707,
+  "text_head": "{\"S\":false,\"Se\":24,\"M\":5869,\"Tp\":1,\"Tpg\":1,\"Qd\":2,\"Dtp\":\"Item\",\"Di\":\"Item\",\"Dl\":\"Lote\",\"Ne\":\"CNI\",\"Tcp\":false,\"Cpe\":{\"ExibirPortalExternoOportunidades\":true,\"CoresTema\":\"theme-dark-blue-light\",\"HabilitarFaleConosco\":true,\"ListaContatos\":[{\"Destino\":\"Suporte GoBuyer\",\"Contato\":\"contato@gobuyer.com.br\"},{\"Destino\":\"Suporte Processos de Seleção\",\"Contato\":\"processodeselecao@cni.com.br\"}],\"Logo\":\"logo-sistema-industria-min.png\",\"NomeTemporarioArquivoLogo\":null,\"Banner\":\"banner_cni (1).jpg\",\"NomeTemporarioArquivoBanner\":null},\"Mo\":\"R$\",\"Sd\":false,\"Dt\":[{\"Data\":\"2026-08-11T09:00:00\",\"Nome\":\"Data início proposta preços\",\"IdEdital\":\"1b05ff48-33a5-4168-bafd-880e56f06a98\",\"CodigoDataEdital\":2707,\"CodigoJob\":\"245841\",\"TipoData\":9},{\"Data\":\"2026-08-17T09:59:00\",\"Nome\":\"Data limite proposta preços\",\"IdEdital\":\"1b05ff48-33a5-4168-bafd-880e56f06a98\",\"CodigoDataEdital\":2708,\"CodigoJob\":\"245842\",\"TipoData\":8},{\"Data\":\"2026-08-17T10:00:00\",\"Nome\":\"Data de abertura de lances\",\"IdEdital\":\"1b05ff48-33a5-4168-bafd-880e56f06a98\",\"CodigoDataEdital\":2709,\"TipoData\":2}],\"Ed\":{\"Codigo\":22625,\"Id\":\"1b05ff48-33a5-4168-bafd-880e56f06a98\",\"NumeroProcesso\":\"000004/2026\",\"Objeto\":\"Ac contratacao e necessaria para "
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/salaDisputaPublica/1b05ff48-33a5-4168-bafd-880e56f06a98/tipoprocesso",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "www_authenticate": null,
+  "len": 1,
+  "text_head": "1"
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/salaDisputaPublica/1b05ff48-33a5-4168-bafd-880e56f06a98/tipopregao",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "www_authenticate": null,
+  "len": 1,
+  "text_head": "1"
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/salaDisputaPublica/1b05ff48-33a5-4168-bafd-880e56f06a98/quantidadecasasdecimais",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "www_authenticate": null,
+  "len": 1,
+  "text_head": "2"
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/salaDisputaPublica/1b05ff48-33a5-4168-bafd-880e56f06a98/listarFases",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "www_authenticate": null,
+  "len": 421,
+  "text_head": "[{\"Codigo\":1,\"NomeReduzido\":\"Edital\"},{\"Codigo\":2,\"NomeReduzido\":\"Proposta de Preços\"},{\"Codigo\":3,\"NomeReduzido\":\"Conformidade Proposta\"},{\"Codigo\":4,\"NomeReduzido\":\"Lances\"},{\"Codigo\":23,\"NomeReduzido\":\"Negociação/Qualificação\"},{\"Codigo\":6,\"NomeReduzido\":\"Vencedor\"},{\"Codigo\":20,\"NomeReduzido\":\"Aprovação\"},{\"Codigo\":9,\"NomeReduzido\":\"Finalização\"},{\"Codigo\":15,\"NomeReduzido\":\"Situação fora do processo\"}]"
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/salaDisputaPublica/1b05ff48-33a5-4168-bafd-880e56f06a98/funcionalidadesModalidadePermitidas",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "www_authenticate": null,
+  "len": 1517,
+  "text_head": "[{\"Nome\":\"Unicompras.Cotacao.VisualizarSinalizadorEmNegociacaoNoPortalExterno\",\"Situacoes\":[70,77],\"CodigoModalidade\":5869},{\"Nome\":\"Unicompras.Cotacao.VisualizarSinalizadorVencedorNoPortalExterno\",\"Situacoes\":[7,8,9,24,11,16,19,70,77],\"CodigoModalidade\":5869},{\"Nome\":\"Unicompras.Cotacao.VisualizarDetalhesItensPropostaComprador\",\"Situacoes\":[7,11,16,8,9,24,19,70,77],\"CodigoModalidade\":5869},{\"Nome\":\"Unicompras.Cotacao.VisualizarSinalizadorConcorrendoNoPortalExterno\",\"Situacoes\":[6,7,11,16,19,8,9,24,35,70,77],\"CodigoModalidade\":5869},{\"Nome\":\"Unicompras.Cotacao.VisualizarNomeProponenteDetalhesPropostaNoPortalExterno\",\"Situacoes\":[6,7,8,9,24,35,11,16,19,70,77],\"CodigoModalidade\":5869},{\"Nome\":\"Unicompras.Cotacao.VisualizarSinalizadorClassificacaoNoPortalExterno\",\"Situacoes\":[7,11,16,19,8,9,24,70,77],\"CodigoModalidade\":5869},{\"Nome\":\"Unicompras.Cotacao.Chat.VisualizarHistoricoChatNoPortalExterno\",\"Situacoes\":[7,8,11,16,19,9,20,24,70,77],\"CodigoModalidade\":5869},{\"Nome\":\"Unicompras.Cotacao.VisualizarSinalizadorStatusLoteItemNoPortalExterno\",\"Situacoes\":[6,7,11,16,19,8,9,20,24,70,77],\"CodigoModalidade\":5869},{\"Nome\":\"Unicompras.Cotacao.VisualizarSinalizadorMelhorPropostaNoPortalExterno\""
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/salaDisputaPublica/1b05ff48-33a5-4168-bafd-880e56f06a98/listarSalaDisputaPublica?IdEdital=1b05ff48-33a5-4168-bafd-880e56f06a98",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "www_authenticate": null,
+  "len": 390,
+  "text_head": "{\"Data\":[{\"Codigo\":49585,\"CodigoStatus\":2,\"CodigoTipoProcesso\":1,\"DescricaoStatus\":\"Fechado\",\"Nome\":\"PRODUCAO DE EVENTOS\",\"Numero\":1,\"Paralisado\":false,\"ValorMelhorLance\":10655957.0900,\"StatusLei123\":1,\"DescricaoStatusLei123\":\"Não Verificado\",\"CodigoExterno\":\"04df75f4-fdbf-4698-a321-b413014397ca\",\"ParticipacaoRestrita\":false}],\"Pages\":1,\"RowsCount\":1,\"Page\":1,\"PageSize\":10,\"FirstRow\":0}"
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/salaDisputaPublica/1b05ff48-33a5-4168-bafd-880e56f06a98/listarparticipantespropostasporedital",
+  "status": 500,
+  "content_type": "application/json",
+  "www_authenticate": null,
+  "len": 203,
+  "text_head": "{\n  \"Message\": \"Ocorreu um erro interno. Por favor, tente novamente mais tarde.\",\n  \"Type\": \"InternalServerError\",\n  \"DomainException\": false,\n  \"RequerConfirmacaoUsuario\": false,\n  \"Validations\": null\n}"
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/salaDisputaPublica/1b05ff48-33a5-4168-bafd-880e56f06a98/listarpaginadormapacomparativo?page=1&pageSize=20",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "www_authenticate": null,
+  "len": 71,
+  "text_head": "{\"Data\":[],\"Pages\":0,\"RowsCount\":0,\"Page\":1,\"PageSize\":20,\"FirstRow\":0}"
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/salaDisputaPublica/1b05ff48-33a5-4168-bafd-880e56f06a98/manifestacoes?page=1&pageSize=20",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "www_authenticate": null,
+  "len": 71,
+  "text_head": "{\"Data\":[],\"Pages\":0,\"RowsCount\":0,\"Page\":1,\"PageSize\":20,\"FirstRow\":0}"
+ }
+]

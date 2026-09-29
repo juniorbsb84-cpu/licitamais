@@ -1,0 +1,89 @@
+{
+ "Data": [
+  {
+   "Codigo": 3,
+   "Titulo": "Orientações para Cadastro de Pessoa Jurídica",
+   "Autor": "Rayane Crisostomo",
+   "Resumo": "Comunicado importante para Fornecedores da Confederação Nacional da Indústria",
+   "DataPublicacao": "2023-08-24T03:00:00",
+   "CodigoEmpresa": 1815,
+   "CodigoTipoAviso": 0,
+   "FixarPainelOportunidade": true
+  },
+  {
+   "Codigo": 8,
+   "Titulo": "Como Cadastrar Pessoa Física",
+   "Autor": "Geovane",
+   "Resumo": "Assista ao vídeo e aprenda como cadastrar um fornecedor pessoa física",
+   "DataPublicacao": "2024-11-27T03:00:00",
+   "CodigoEmpresa": 1815,
+   "CodigoTipoAviso": 0,
+   "FixarPainelOportunidade": true
+  },
+  {
+   "Codigo": 15,
+   "Titulo": "Como Cadastrar Funcionário do sistema indústria",
+   "Autor": "Rayane Crisostomo",
+   "Resumo": "Assista ao vídeo e aprenda como cadastrar um funcionário do CNI / SESI-DN / SENAI-DN / IEL-NC na plataforma",
+   "DataPublicacao": "2025-04-15T03:00:00",
+   "CodigoEmpresa": 1815,
+   "CodigoTipoAviso": 0,
+   "FixarPainelOportunidade": true
+  },
+  {
+   "Codigo": 7,
+   "Titulo": "Realizar novo cadastro no mesmo login de acesso",
+   "Autor": "Geovane",
+   "Resumo": "Assista ao vídeo e aprenda como cadastrar uma nova filial ou uma empresa representada",
+   "DataPublicacao": "2024-11-19T03:00:00",
+   "CodigoEmpresa": 1815,
+   "CodigoTipoAviso": 0,
+   "FixarPainelOportunidade": true
+  },
+  {
+   "Codigo": 6,
+   "Titulo": "Ajuda e suporte GoBuyer",
+   "Autor": "Geovane",
+   "Resumo": "Aprenda a utilizar a Plataforma GoBuyer",
+   "DataPublicacao": "2024-03-19T03:00:00",
+   "CodigoEmpresa": 1815,
+   "CodigoTipoAviso": 0,
+   "FixarPainelOportunidade": false
+  },
+  {
+   "Codigo": 5,
+   "Titulo": "Novo portal de compras e acesso processos antigos",
+   "Autor": "Geovane",
+   "Resumo": "Novo Regulamento de Contração e Alienação (RCA) e a Plataforma GoBuyer",
+   "DataPublicacao": "2024-03-19T03:00:00",
+   "CodigoEmpresa": 1815,
+   "CodigoTipoAviso": 0,
+   "FixarPainelOportunidade": false
+  },
+  {
+   "Codigo": 4,
+   "Titulo": "Regulamento de Contração e Alienação - RCA",
+   "Autor": "Geovane",
+   "Resumo": "Novo regulamento de contratações do SESI SENAI",
+   "DataPublicacao": "2024-03-19T03:00:00",
+   "CodigoEmpresa": 1815,
+   "CodigoTipoAviso": 0,
+   "FixarPainelOportunidade": false
+  },
+  {
+   "Codigo": 9,
+   "Titulo": "Como Cancelar o Envio de E-mails",
+   "Autor": "Geovane",
+   "Resumo": "Aprenda como desativar o envio de e-mails da plataforma GoBuyer de forma simples e prática com o nosso novo vídeo tutorial",
+   "DataPublicacao": "2024-12-02T03:00:00",
+   "CodigoEmpresa": 1815,
+   "CodigoTipoAviso": 0,
+   "FixarPainelOportunidade": false
+  }
+ ],
+ "Pages": 1,
+ "RowsCount": 8,
+ "Page": 1,
+ "PageSize": 10,
+ "FirstRow": 0
+}

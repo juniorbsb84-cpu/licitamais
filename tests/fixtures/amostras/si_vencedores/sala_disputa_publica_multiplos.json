@@ -1,0 +1,154 @@
+[
+ {
+  "edital": "1b05ff48-33a5-4168-bafd-880e56f06a98",
+  "numero": "000004/2026",
+  "empresa": "CNI",
+  "modalidade": "Cotação Eletrônica - com disputa",
+  "status": "Finalizado",
+  "lotes": 1,
+  "propostas": [
+   {
+    "lote": 49585,
+    "status_http": 200,
+    "qtd": 7,
+    "tem_vencedor": true,
+    "vencedor_nome": "Proponente 6 (M/CHECON DESIGN E CENOGRAFIA LTDA - 15392953000110)",
+    "vencedor_valor": 10655957.09,
+    "melhor_lance": 10655957.09
+   }
+  ]
+ },
+ {
+  "edital": "898a7f61-4e1b-46e6-89be-4477468a3b5c",
+  "numero": "000030/2026",
+  "empresa": "SENAI",
+  "modalidade": "Seleção Disputa Aberta",
+  "status": "Finalizado",
+  "lotes": 1,
+  "propostas": [
+   {
+    "lote": 46579,
+    "status_http": 200,
+    "qtd": 3,
+    "tem_vencedor": true,
+    "vencedor_nome": "Proponente 5 (FULSTANDIG SHOWS E EVENTOS MC LTDA - 05231625000188)",
+    "vencedor_valor": 1150000.0,
+    "melhor_lance": 1150000.0
+   }
+  ]
+ },
+ {
+  "edital": "fad536fa-3d05-4bb6-a07f-8157668d00b0",
+  "numero": "000032/2026",
+  "empresa": "CNI",
+  "modalidade": "Seleção Disputa Aberta",
+  "status": "Finalizado",
+  "lotes": 1,
+  "propostas": [
+   {
+    "lote": 46680,
+    "status_http": 200,
+    "qtd": 2,
+    "tem_vencedor": true,
+    "vencedor_nome": "Proponente 7 (EMN REPRESENTACAO COMERCIAL, AUDIO E VID... - 35056963000191)",
+    "vencedor_valor": 291769.98,
+    "melhor_lance": 291769.98
+   }
+  ]
+ },
+ {
+  "edital": "00eb7ef9-3ea3-496d-ab43-140544960f5c",
+  "numero": "000035/2026",
+  "empresa": "SENAI",
+  "modalidade": "Seleção Disputa Aberta",
+  "status": "Finalizado",
+  "lotes": 1,
+  "propostas": [
+   {
+    "lote": 46864,
+    "status_http": 200,
+    "qtd": 11,
+    "tem_vencedor": true,
+    "vencedor_nome": "Proponente 3 (TDBUSINESS LTDA - 38303166000150)",
+    "vencedor_valor": 208000.0,
+    "melhor_lance": 208000.0
+   }
+  ]
+ },
+ {
+  "edital": "4a5e2eb6-a3b5-464b-81d5-ffeca1eac764",
+  "numero": "000037/2026",
+  "empresa": "CNI",
+  "modalidade": "Seleção Disputa Aberta",
+  "status": "Finalizado",
+  "lotes": 1,
+  "propostas": [
+   {
+    "lote": 47484,
+    "status_http": 200,
+    "qtd": 5,
+    "tem_vencedor": true,
+    "vencedor_nome": "Proponente 5 (METHODOS INSTITUTO DE TECNOLOGIA E EDUCA... - 77949900172)",
+    "vencedor_valor": 129000.0,
+    "melhor_lance": 129000.0
+   }
+  ]
+ },
+ {
+  "edital": "f04806c2-2a8f-4a7b-ad58-96dab4ba774e",
+  "numero": "000039/2026",
+  "empresa": "CNI",
+  "modalidade": "Seleção Disputa Aberta",
+  "status": "Finalizado",
+  "lotes": 1,
+  "propostas": [
+   {
+    "lote": 47350,
+    "status_http": 200,
+    "qtd": 2,
+    "tem_vencedor": true,
+    "vencedor_nome": "Proponente 2 (INFORMAC TECNOLOGIA E SERVICOS LTDA - 17272450000136)",
+    "vencedor_valor": 727500.0,
+    "melhor_lance": 727500.0
+   }
+  ]
+ },
+ {
+  "edital": "9e5185c6-9753-48a0-aa21-4f55be3dc3de",
+  "numero": "000038/2026",
+  "empresa": "SESI",
+  "modalidade": "Seleção Disputa Aberta",
+  "status": "Finalizado",
+  "lotes": 1,
+  "propostas": [
+   {
+    "lote": 47347,
+    "status_http": 200,
+    "qtd": 14,
+    "tem_vencedor": true,
+    "vencedor_nome": "Proponente 1 (PHL SERVICOS DE INFORMATICA LTDA  - 07681412000183)",
+    "vencedor_valor": 209880.0,
+    "melhor_lance": 209880.0
+   }
+  ]
+ },
+ {
+  "edital": "c63fac57-4df3-4dea-b746-6b611aee884a",
+  "numero": "000034/2026",
+  "empresa": "SESI,SENAI",
+  "modalidade": "Seleção Disputa Aberta",
+  "status": "Finalizado",
+  "lotes": 1,
+  "propostas": [
+   {
+    "lote": 46746,
+    "status_http": 200,
+    "qtd": 12,
+    "tem_vencedor": true,
+    "vencedor_nome": "Proponente 8 (Connec Telecomunicações e Informática Lt... - 11745682000188)",
+    "vencedor_valor": 215000.0,
+    "melhor_lance": 215000.0
+   }
+  ]
+ }
+]

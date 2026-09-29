@@ -1,0 +1,78 @@
+{
+  "registros": [
+    {
+      "id": "BRB-2024000001",
+      "numero": "000001/2024",
+      "objeto": "Aquisicao de material de escritorio para a sede",
+      "modalidade": "PREGAO_ELETRONICO",
+      "status": "ABERTA",
+      "data_abertura": "2024-01-15T10:00:00Z",
+      "data_encerramento": "2024-01-25T10:00:00Z",
+      "orgao": {
+        "codigo": "001",
+        "nome": "Secretaria de Administracao",
+        "cnpj": "00000000000001"
+      },
+      "valor_estimado": "123456.78",
+      "itens": [
+        {
+          "codigo": "ITEM-001",
+          "descricao": "Papel A4 75g - caixa com 5000 folhas",
+          "quantidade": 10,
+          "valor_unitario": "89.90",
+          "unidade": "CX"
+        },
+        {
+          "codigo": "ITEM-002",
+          "descricao": "Caneta esferografica azul - caixa com 50 unidades",
+          "quantidade": 5,
+          "valor_unitario": "45.00",
+          "unidade": "CX"
+        }
+      ],
+      "anexos": [
+        {
+          "nome": "edital.pdf",
+          "url": "https://portal.brb.gov.br/arquivos/edital_000001_2024.pdf",
+          "tipo": "EDITAL"
+        },
+        {
+          "nome": "termo_referencia.pdf",
+          "url": "https://portal.brb.gov.br/arquivos/tr_000001_2024.pdf",
+          "tipo": "TERMO_REFERENCIA"
+        }
+      ]
+    },
+    {
+      "id": "BRB-2024000002",
+      "numero": "000002/2024",
+      "objeto": "Contratacao de servicos de limpeza e conservacao",
+      "modalidade": "CONCORRENCIA",
+      "status": "EM_ANDAMENTO",
+      "data_abertura": "2024-02-01T09:00:00Z",
+      "data_encerramento": "2024-02-20T09:00:00Z",
+      "orgao": {
+        "codigo": "002",
+        "nome": "Secretaria de Infraestrutura",
+        "cnpj": "00000000000002"
+      },
+      "valor_estimado": "987654.32",
+      "itens": [
+        {
+          "codigo": "ITEM-001",
+          "descricao": "Servico de limpeza diaria - area administrativa",
+          "quantidade": 1,
+          "valor_unitario": "15000.00",
+          "unidade": "MES"
+        }
+      ],
+      "anexos": []
+    }
+  ],
+  "paginacao": {
+    "pagina_atual": 1,
+    "total_paginas": 3,
+    "total_registros": 5,
+    "tem_proxima": true
+  }
+}

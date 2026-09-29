@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LicitamAIs: as licitações que o PNCP não mostra</title>
+<meta name="description" content="Editais do Sistema S e do BRB, que não publicam no PNCP, com quem venceu e por quanto em cada disputa encerrada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --papel: #FFFFFF;
+    --nevoa: #F6F6F4;
+    --tinta: #1A1A1A;
+    --pedra: #66625A;
+    --pedra-noite: #A7A399;
+    --linha: #E7E4DD;
+    --linha-noite: #3A3935;
+    --ouro: #D4AF37;
+    --ouro-tinta: #7A5E12;
+    --ouro-claro: #EFE6C8;
+    --display: "Cormorant Garamond", Georgia, serif;
+    --texto: "Libre Franklin", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--papel); color: var(--tinta); font: 400 16px/1.6 var(--texto); -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--ouro); outline-offset: 3px; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 500; margin: 0; line-height: 1.08; font-variant-numeric: lining-nums; }
+  .num { font-variant-numeric: tabular-nums lining-nums; }
+  .miolo { max-width: 1160px; margin: 0 auto; padding: 0 40px; }
+
+  /* cabeçalho */
+  .topo { position: absolute; inset: 0 0 auto; z-index: 2; }
+  .topo .miolo { display: flex; align-items: center; gap: 40px; height: 84px; }
+  .marca { font: 600 28px/1 var(--display); color: var(--papel); text-decoration: none; }
+  .marca i { font-style: normal; color: var(--ouro); }
+  .topo nav { display: flex; gap: 28px; margin-left: auto; font-size: 14px; }
+  .topo nav a { color: var(--pedra); text-decoration: none; }
+  .topo nav a:hover { color: var(--tinta); }
+  .topo .entrar { color: var(--tinta); border-bottom: 1px solid var(--ouro); padding-bottom: 2px; }
+
+  /* capa dividida */
+  .capa { display: grid; grid-template-columns: 1.05fr 1fr; min-height: 100vh; }
+  .capa-noite { background: var(--tinta); color: var(--papel); display: flex; flex-direction: column; justify-content: flex-end; padding: 140px 64px 80px max(40px, calc((100vw - 1160px) / 2 + 40px)); border-right: 1px solid var(--ouro); }
+  .capa-sobre { font: italic 500 21px/1.35 var(--display); color: var(--ouro); margin: 0 0 28px; max-width: 32ch; }
+  .capa h1 { font-size: clamp(52px, 7vw, 104px); line-height: .98; letter-spacing: -.015em; max-width: 11ch; }
+  .capa-lead { margin: 32px 0 0; max-width: 46ch; color: var(--pedra-noite); font-size: 17px; }
+  .capa-acoes { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 40px; }
+  .btn { display: inline-block; font: 500 15px/1 var(--texto); padding: 16px 26px; text-decoration: none; border: 1px solid transparent; }
+  .btn-ouro { background: var(--ouro); color: var(--tinta); }
+  .btn-ouro:hover { background: var(--papel); }
+  .btn-linha { border-color: var(--linha-noite); color: var(--papel); }
+  .btn-linha:hover { border-color: var(--ouro); }
+
+  .capa-recorte { display: flex; flex-direction: column; justify-content: center; padding: 140px max(40px, calc((100vw - 1160px) / 2 + 40px)) 80px 64px; background: var(--papel); }
+  .recorte-rotulo { font-size: 13px; color: var(--pedra); margin: 0 0 10px; }
+  .recorte-titulo { font-size: 30px; margin-bottom: 8px; }
+  .recorte-sub { margin: 0 0 32px; font-size: 14px; color: var(--pedra); max-width: 44ch; }
+  .lances { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--tinta); }
+  .lance { display: grid; grid-template-columns: 1fr 112px; align-items: center; gap: 16px; padding: 7px 0; border-bottom: 1px solid var(--linha); font-size: 13.5px; }
+  .lance-barra { height: 8px; background: var(--linha); position: relative; }
+  .lance-barra span { position: absolute; inset: 0 auto 0 0; background: #BDB8AD; }
+  .lance--vencedor .lance-barra span { background: var(--ouro); }
+  .lance--vencedor { font-weight: 600; }
+  .lance-valor { text-align: right; }
+  .recorte-leitura { margin: 28px 0 0; font: 500 23px/1.35 var(--display); max-width: 30ch; }
+  .recorte-leitura b { font: 600 19px var(--texto); background: var(--ouro-claro); padding: 0 4px; white-space: nowrap; }
+  .recorte-nota { margin: 14px 0 0; font-size: 12.5px; color: var(--pedra); }
+
+  /* números */
+  .numeros { border-bottom: 1px solid var(--linha); }
+  .numeros .miolo { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .numero { padding: 44px 24px 44px 0; }
+  .numero + .numero { padding-left: 24px; border-left: 1px solid var(--linha); }
+  .numero b { display: block; font: 600 30px/1.1 var(--texto); letter-spacing: -.02em; }
+  .numero span { display: block; margin-top: 8px; font-size: 14px; color: var(--pedra); max-width: 22ch; }
+
+  /* seções */
+  .secao { padding: 112px 0; }
+  .secao-cabeca { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: end; margin-bottom: 64px; }
+  .secao-cabeca h2 { font-size: clamp(38px, 4.6vw, 60px); letter-spacing: -.01em; max-width: 14ch; }
+  .secao-cabeca p { margin: 0; color: var(--pedra); max-width: 48ch; justify-self: end; }
+
+  .passos { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--tinta); }
+  .passo { padding: 32px 32px 0 0; }
+  .passo + .passo { padding-left: 32px; border-left: 1px solid var(--linha); }
+  .passo-n { font: 600 56px/1 var(--display); color: var(--ouro); font-variant-numeric: lining-nums; }
+  .passo h3 { font-size: 28px; margin: 20px 0 12px; }
+  .passo p { margin: 0; color: var(--pedra); font-size: 15px; }
+
+  .fontes { width: 100%; border-collapse: collapse; font-size: 15px; }
+  .fontes th { text-align: left; font-size: 13px; font-weight: 500; color: var(--pedra); padding: 0 16px 12px 0; border-bottom: 1px solid var(--tinta); }
+  .fontes td { padding: 20px 16px 20px 0; border-bottom: 1px solid var(--linha); vertical-align: top; }
+  .fontes td:first-child { font: 500 24px/1.2 var(--display); }
+  .fontes td:first-child small { display: block; margin-top: 4px; font: 400 13px var(--texto); color: var(--pedra); }
+  .fontes .dir { text-align: right; white-space: nowrap; }
+
+  .escuro { background: var(--tinta); color: var(--papel); }
+  .escuro .secao-cabeca p { color: var(--pedra-noite); }
+  .planos { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--linha-noite); }
+  .plano { padding: 36px 36px 8px 0; display: flex; flex-direction: column; }
+  .plano + .plano { padding-left: 36px; border-left: 1px solid var(--linha-noite); }
+  .plano--destaque { border-top: 2px solid var(--ouro); margin-top: -1px; }
+  .plano h3 { font-size: 32px; }
+  .plano-preco { margin: 10px 0 20px; font: italic 500 20px var(--display); color: var(--ouro); }
+  .plano p { margin: 0 0 20px; color: var(--pedra-noite); font-size: 15px; }
+  .plano ul { margin: 0 0 32px; padding: 0; list-style: none; font-size: 14.5px; }
+  .plano li { padding: 9px 0; border-bottom: 1px solid var(--linha-noite); }
+  .plano .btn { margin-top: auto; align-self: flex-start; }
+
+  .chamada { padding: 128px 0; text-align: left; border-bottom: 1px solid var(--linha); }
+  .chamada .miolo { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: end; }
+  .chamada h2 { font-size: clamp(44px, 6vw, 84px); line-height: .98; letter-spacing: -.015em; max-width: 12ch; }
+  .chamada p { margin: 0 0 28px; color: var(--pedra); max-width: 44ch; }
+  .chamada .btn-ouro { background: var(--tinta); color: var(--papel); }
+  .chamada .btn-ouro:hover { background: var(--ouro); color: var(--tinta); }
+
+  footer { padding: 40px 0 56px; font-size: 13px; color: var(--pedra); }
+  footer .miolo { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .lance-barra span { animation: enche 1s cubic-bezier(.2,.7,.2,1) both; transform-origin: left; }
+    .lance:nth-child(n+2) .lance-barra span { animation-delay: .08s; }
+    .lance:nth-child(n+4) .lance-barra span { animation-delay: .16s; }
+    .lance:nth-child(n+7) .lance-barra span { animation-delay: .24s; }
+    @keyframes enche { from { transform: scaleX(0); } }
+  }
+
+  @media (max-width: 960px) {
+    .miolo { padding: 0 20px; }
+    .topo nav a:not(.entrar) { display: none; }
+    .topo .entrar { color: var(--papel); }
+    .capa { grid-template-columns: 1fr; min-height: 0; }
+    .capa-noite { padding: 128px 20px 56px; border-right: 0; border-bottom: 1px solid var(--ouro); }
+    .capa-recorte { padding: 56px 20px; }
+    .numeros .miolo { grid-template-columns: 1fr 1fr; }
+    .numero:nth-child(3) { padding-left: 0; border-left: 0; }
+    .numero:nth-child(n+3) { border-top: 1px solid var(--linha); }
+    .secao { padding: 72px 0; }
+    .secao-cabeca, .chamada .miolo { grid-template-columns: 1fr; gap: 20px; }
+    .secao-cabeca p { justify-self: start; }
+    .passos, .planos { grid-template-columns: 1fr; }
+    .passo + .passo, .plano + .plano { padding-left: 0; border-left: 0; }
+    .passo { padding-bottom: 32px; border-bottom: 1px solid var(--linha); }
+    .plano { padding-bottom: 32px; border-bottom: 1px solid var(--linha-noite); }
+    .fontes thead { display: none; }
+    .fontes, .fontes tbody, .fontes tr, .fontes td { display: block; }
+    .fontes tr { border-bottom: 1px solid var(--linha); padding: 16px 0; }
+    .fontes td { border: 0; padding: 3px 0; }
+    .fontes .dir { text-align: left; }
+    .chamada { padding: 80px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="miolo">
+    <a class="marca" href="#">Licitam<i>AI</i>s</a>
+    <nav aria-label="Principal">
+      <a href="#disputa">A disputa</a>
+      <a href="#como">Como funciona</a>
+      <a href="#fontes">Fontes</a>
+      <a href="#planos">Planos</a>
+      <a class="entrar" href="/entrar">Entrar</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="capa">
+    <div class="capa-noite">
+      <p class="capa-sobre">Licitações do Sistema S e do Banco de Brasília</p>
+      <h1>O que o PNCP não mostra.</h1>
+      <p class="capa-lead">SENAC, SEST SENAT, SENAI, SESI, SESCOOP e BRB compram por regulamento próprio e publicam em portais próprios. Lemos todos eles uma vez por dia e guardamos quem venceu cada disputa e por quanto.</p>
+      <div class="capa-acoes">
+        <a class="btn btn-ouro" href="#piloto">Entrar no piloto</a>
+        <a class="btn btn-linha" href="#disputa">Ver uma disputa real</a>
+      </div>
+    </div>
+
+    <div class="capa-recorte" id="disputa">
+      <p class="recorte-rotulo">Sistema Indústria, disputa 000035/2026</p>
+      <h2 class="recorte-titulo">Engenharia de dados em nuvem Azure</h2>
+      <p class="recorte-sub">Onze propostas na sala de disputa pública. Nomes dos concorrentes omitidos; os valores são os registrados pelo portal.</p>
+      <ol class="lances" aria-label="Propostas da disputa, do menor ao maior valor">
+        <li class="lance lance--vencedor"><span class="lance-barra"><span style="width:28.9%"></span></span><span class="lance-valor num">R$ 208.000</span></li>
+        <li class="lance"><span class="lance-barra"><span style="width:31.7%"></span></span><span class="lance-valor num">R$ 227.920</span></li>
+        <li class="lance"><span class="lance-barra"><span style="width:39.4%"></span></span><span class="lance-valor num">R$ 283.960</span></li>
+        <li class="lance"><span class="lance-barra"><span style="width:48.6%"></span></span><span class="lance-valor num">R$ 350.000</span></li>
+        <li class="lance"><span class="lance-barra"><span style="width:59.4%"></span></span><span class="lance-valor num">R$ 428.000</span></li>
+        <li class="lance"><span class="lance-barra"><span style="width:59.5%"></span></span><span class="lance-valor num">R$ 428.160</span></li>
+        <li class="lance"><span class="lance-barra"><span style="width:81%"></span></span><span class="lance-valor num">R$ 583.000</span></li>
+        <li class="lance"><span class="lance-barra"><span style="width:82.8%"></span></span><span class="lance-valor num">R$ 596.000</span></li>
+        <li class="lance"><span class="lance-barra"><span style="width:83.3%"></span></span><span class="lance-valor num">R$ 600.000</span></li>
+        <li class="lance"><span class="lance-barra"><span style="width:99.9%"></span></span><span class="lance-valor num">R$ 719.000</span></li>
+        <li class="lance"><span class="lance-barra"><span style="width:100%"></span></span><span class="lance-valor num">R$ 720.000</span></li>
+      </ol>
+      <p class="recorte-leitura">Venceu com <b class="num">R$ 208 mil</b>, metade da proposta mediana. A outra ponta pediu mais que o triplo.</p>
+      <p class="recorte-nota">Em dourado, a proposta vencedora. Nada disso aparece em agregadores que só leem o PNCP.</p>
+    </div>
+  </section>
+
+  <section class="numeros" aria-label="O histórico em números">
+    <div class="miolo">
+      <div class="numero"><b class="num">118.558</b><span>processos de compra no histórico</span></div>
+      <div class="numero"><b class="num">14.585</b><span>contratos com valor e fornecedor</span></div>
+      <div class="numero"><b class="num">R$ 14,6 bi</b><span>em contratos assinados, desde 2003</span></div>
+      <div class="numero"><b class="num">10.505</b><span>fornecedores que já venderam a essas entidades</span></div>
+    </div>
+  </section>
+
+  <section class="secao" id="como">
+    <div class="miolo">
+      <div class="secao-cabeca">
+        <h2>Do portal fechado ao seu Telegram.</h2>
+        <p>Cada entidade publica num sistema diferente, com sessão, paginação e formatos próprios. O trabalho chato é nosso; você recebe o edital e o histórico juntos.</p>
+      </div>
+      <div class="passos">
+        <div class="passo">
+          <div class="passo-n">1</div>
+          <h3>Lemos as fontes todo dia</h3>
+          <p>Ao meio-dia, a coleta passa por todos os portais, traz editais novos, mudanças de fase, contratos assinados e o resultado das salas de disputa.</p>
+        </div>
+        <div class="passo">
+          <div class="passo-n">2</div>
+          <h3>Você define o que vigiar</h3>
+          <p>Cadastre as palavras do que você vende, como limpeza, mobiliário ou manutenção predial. Quando um edital casa, o aviso chega no Telegram.</p>
+        </div>
+        <div class="passo">
+          <div class="passo-n">3</div>
+          <h3>Proposta com base em preço pago</h3>
+          <p>Para cada edital, o site mostra quanto já se pagou por compras parecidas, a faixa em que metade dos valores caiu e quem mais venceu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="fontes" style="padding-top: 0;">
+    <div class="miolo">
+      <div class="secao-cabeca">
+        <h2>As fontes que acompanhamos.</h2>
+        <p>Nenhum dado é simulado. Os portais tiram editais antigos da vitrine; aqui eles ficam, com o valor de quem venceu.</p>
+      </div>
+      <table class="fontes">
+        <thead><tr><th>Entidade</th><th>O que guardamos</th><th class="dir">Processos</th></tr></thead>
+        <tbody>
+          <tr><td>SEST SENAT<small>Departamento executivo e unidades</small></td><td>Editais, vencedor com CNPJ e valor</td><td class="dir num">104.659</td></tr>
+          <tr><td>SENAC<small>Administração nacional e regionais</small></td><td>Licitações e contratos com favorecido, CNPJ e valor</td><td class="dir num">11.422</td></tr>
+          <tr><td>Banco de Brasília<small>Lei das Estatais, 13.303/2016</small></td><td>Licitações e contratos com valor</td><td class="dir num">2.102</td></tr>
+          <tr><td>Sistema Indústria<small>CNI, SENAI, SESI, IEL</small></td><td>Editais, lotes e todas as propostas da sala de disputa</td><td class="dir num">293</td></tr>
+          <tr><td>SESCOOP<small>Cooperativismo</small></td><td>Editais e propostas da sala de disputa</td><td class="dir num">12</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="secao escuro" id="planos">
+    <div class="miolo">
+      <div class="secao-cabeca">
+        <h2>Planos em definição.</h2>
+        <p>Estamos em piloto fechado com fornecedores selecionados. Quem entra agora usa de graça durante os testes e ajuda a definir preço e pacote.</p>
+      </div>
+      <div class="planos">
+        <div class="plano">
+          <h3>Radar</h3>
+          <p class="plano-preco">valor a definir</p>
+          <p>Para quem precisa saber do edital antes do concorrente.</p>
+          <ul>
+            <li>Avisos no Telegram</li>
+            <li>Até 5 alertas de palavras</li>
+            <li>Todas as fontes acompanhadas</li>
+          </ul>
+          <a class="btn btn-linha" href="#piloto">Pedir acesso</a>
+        </div>
+        <div class="plano plano--destaque">
+          <h3>Preços</h3>
+          <p class="plano-preco">valor a definir</p>
+          <p>Para quem disputa e precisa calibrar a proposta.</p>
+          <ul>
+            <li>Tudo do Radar</li>
+            <li>Histórico de preços por objeto</li>
+            <li>Vencedores e propostas por disputa</li>
+            <li>Contratos com vigência e fornecedor</li>
+          </ul>
+          <a class="btn btn-ouro" href="#piloto">Entrar no piloto</a>
+        </div>
+        <div class="plano">
+          <h3>Dados</h3>
+          <p class="plano-preco">sob consulta</p>
+          <p>Para equipes de licitação que querem os dados no próprio sistema.</p>
+          <ul>
+            <li>Exportação do histórico</li>
+            <li>Acompanhamento de concorrentes</li>
+          </ul>
+          <a class="btn btn-linha" href="mailto:contato@licitamais.com.br?subject=Plano%20Dados%20LicitamAIs">Falar com a gente</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chamada" id="piloto">
+    <div class="miolo">
+      <h2>Entre no piloto.</h2>
+      <div>
+        <p>Diga o que sua empresa vende e em quais entidades costuma disputar. Configuramos os primeiros alertas com você e liberamos o acesso ao site.</p>
+        <a class="btn btn-ouro" href="mailto:contato@licitamais.com.br?subject=Piloto%20LicitamAIs&body=Empresa%3A%20%0D%0AO%20que%20vendemos%3A%20%0D%0AEntidades%20em%20que%20disputamos%3A%20%0D%0AUsu%C3%A1rio%20do%20Telegram%3A%20">Pedir acesso por e-mail</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="miolo">
+    <span>LicitamAIs. Histórico de compras do regime privado, a partir de fontes públicas.</span>
+    <span>2026</span>
+  </div>
+</footer>
+
+</body>
+</html>

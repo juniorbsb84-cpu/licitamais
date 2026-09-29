@@ -1,0 +1,106 @@
+{
+  "registros": [
+    {
+      "id": "BRB-2024000004",
+      "numero": "000004/2024",
+      "objeto": "Contratacao de servicos de vigilancia patrimonial",
+      "modalidade": "PREGAO_ELETRONICO",
+      "status": "ABERTA",
+      "data_abertura": "2024-04-01T08:00:00Z",
+      "data_encerramento": "2024-04-15T08:00:00Z",
+      "orgao": {
+        "codigo": "004",
+        "nome": "Secretaria de Seguranca",
+        "cnpj": "00000000000004"
+      },
+      "valor_estimado": "300000.00",
+      "itens": [
+        {
+          "codigo": "ITEM-001",
+          "descricao": "Vigilancia armada - 24 horas",
+          "quantidade": 1,
+          "valor_unitario": "25000.00",
+          "unidade": "MES"
+        }
+      ],
+      "anexos": [
+        {
+          "nome": "edital_seg.pdf",
+          "url": "https://portal.brb.gov.br/arquivos/edital_seg_000004_2024.pdf",
+          "tipo": "EDITAL"
+        }
+      ]
+    },
+    {
+      "id": "BRB-2024000005",
+      "numero": "000005/2024",
+      "objeto": "Aquisicao de medicamentos para farmacia basica",
+      "modalidade": "PREGAO_ELETRONICO",
+      "status": "ABERTA",
+      "data_abertura": "2024-05-01T08:00:00Z",
+      "data_encerramento": "2024-05-15T08:00:00Z",
+      "orgao": {
+        "codigo": "005",
+        "nome": "Secretaria de Saude",
+        "cnpj": "00000000000005"
+      },
+      "valor_estimado": "750000.00",
+      "itens": [
+        {
+          "codigo": "ITEM-001",
+          "descricao": "Dipirona 500mg - caixa com 100 comprimidos",
+          "quantidade": 500,
+          "valor_unitario": "12.50",
+          "unidade": "CX"
+        }
+      ],
+      "anexos": []
+    },
+    {
+      "id": "BRB-2024000006",
+      "numero": "000006/2024",
+      "objeto": "Registro malformado - campo obrigatorio ausente",
+      "modalidade": "PREGAO_ELETRONICO",
+      "status": "ABERTA",
+      "data_abertura": "2024-06-01T08:00:00Z",
+      "orgao": {
+        "codigo": "006",
+        "nome": "Secretaria de Testes",
+        "cnpj": "00000000000006"
+      },
+      "itens": [],
+      "anexos": []
+    },
+    {
+      "id": "BRB-2024000007",
+      "numero": "000007/2024",
+      "objeto": "Registro com valor_estimado invalido",
+      "modalidade": "PREGAO_ELETRONICO",
+      "status": "ABERTA",
+      "data_abertura": "2024-07-01T08:00:00Z",
+      "data_encerramento": "2024-07-15T08:00:00Z",
+      "orgao": {
+        "codigo": "007",
+        "nome": "Secretaria de Testes",
+        "cnpj": "00000000000007"
+      },
+      "valor_estimado": "invalido",
+      "itens": [
+        {
+          "codigo": "ITEM-001",
+          "descricao": "Item teste",
+          "quantidade": 1,
+          "valor_unitario": "100.00",
+          "unidade": "UN"
+        }
+      ],
+      "anexos": []
+    }
+  ],
+  "paginacao": {
+    "pagina_atual": 3,
+    "total_paginas": 3,
+    "total_registros": 5,
+    "tem_proxima": false
+  }
+}

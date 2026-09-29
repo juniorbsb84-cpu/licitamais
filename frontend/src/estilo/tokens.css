@@ -1,0 +1,25 @@
+:root {
+  --fundo: #FFFFFF;
+  --papel: #FFFFFF;
+  --papel-2: #F6F6F4;
+  --linha: #E7E4DD;
+  --tinta: #1A1A1A;
+  --grafite: #66625A;
+  --azul: #1A1A1A;
+  --verde: #1F6B47;
+  --ambar: #8A4B00;
+  --vermelho: #B3372B;
+  --ouro: #D4AF37;
+  --ouro-tinta: #7A5E12;
+  --noite-texto: #A7A399;
+  --noite-linha: #3A3935;
+  --verde-noite: #8FD3AE;
+  --vermelho-noite: #F0A59C;
+
+  --titulo: "Cormorant Garamond", Georgia, serif;
+  --texto: "Libre Franklin", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --numero: "Libre Franklin", system-ui, sans-serif;
+
+  --container: 1160px;
+  --raio: 2px;
+}

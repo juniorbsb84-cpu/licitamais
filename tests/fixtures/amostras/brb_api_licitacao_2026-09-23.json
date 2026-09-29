@@ -1,0 +1,127 @@
+[
+ {
+  "id": 2370,
+  "titulo": "PREGÃO ELETRÔNICO",
+  "numero": "068",
+  "ano": 2026,
+  "objeto": "Contratação de Licenças de Acesso de Cliente (CAL), licenças de Remote Desktop Service (RDS), também conhecido como Terminal Server (TS), da Plataforma Microsoft, conforme condições e especificações constantes deste edital e seus anexos.",
+  "realizacao": "2026-10-02T14:00:00",
+  "observacao": "https://www.portaldecompraspublicas.com.br/processos/df/brb-banco-de-brasilia-sa-3635/pe-068-2026-2026-510582",
+  "tipo": {
+   "id": 4,
+   "tipo": "pregão"
+  },
+  "fase": {
+   "id": 1,
+   "fase": "Aguardando abertura"
+  },
+  "contratos": [],
+  "anexos": []
+ },
+ {
+  "id": 2372,
+  "titulo": "PREGÃO ELETRÔNICO",
+  "numero": "067",
+  "ano": 2026,
+  "objeto": "Contratação de serviços comuns de engenharia para realização de adequação predial em imóvel locado pelo Banco de Brasília para instalação da PA Conjunto Nacional/DF",
+  "realizacao": "2026-10-15T09:00:00",
+  "observacao": "Para acessar o edital, clique abaixo:\nhttps://www.portaldecompraspublicas.com.br/processos/df/brb-banco-de-brasilia-sa-3635/pe-067-2026-2026-512739",
+  "tipo": {
+   "id": 4,
+   "tipo": "pregão"
+  },
+  "fase": {
+   "id": 1,
+   "fase": "Aguardando abertura"
+  },
+  "contratos": [],
+  "anexos": []
+ },
+ {
+  "id": 2373,
+  "titulo": "PREGÃO ELETRÔNICO",
+  "numero": "063",
+  "ano": 2026,
+  "objeto": "Registro de Preços visando fornecimento e instalação de Carenagens nas dependências do BRB localizadas no Distrito Federal, Goiás, Minas Gerais, Alagoas, Bahia, Maranhão, Paraíba, Tocantins, Rio de Janeiro, São Paulo, Mato Grosso e Mato Grosso do Sul",
+  "realizacao": "2026-10-14T09:00:00",
+  "observacao": "Para acessar o edital, clique abaixo:\nhttps://www.portaldecompraspublicas.com.br/processos/df/brb-banco-de-brasilia-sa-3635/pe-063-2026-2026-512773",
+  "tipo": {
+   "id": 4,
+   "tipo": "pregão"
+  },
+  "fase": {
+   "id": 1,
+   "fase": "Aguardando abertura"
+  },
+  "contratos": [],
+  "anexos": []
+ },
+ {
+  "id": 2367,
+  "titulo": "PREGÃO ELETRÔNICO",
+  "numero": "057",
+  "ano": 2026,
+  "objeto": "Contratação de empresa especializada nos serviços de Transporte, Guarda e Processamento de Valores para atendimento das unidades do BRB em João Pessoa - PB e municípios adjacentes.",
+  "realizacao": "2026-09-02T10:00:00",
+  "observacao": "https://www.portaldecompraspublicas.com.br/processos/df/brb-banco-de-brasilia-sa-3635/pe-057-2026-2026-503298",
+  "tipo": {
+   "id": 4,
+   "tipo": "pregão"
+  },
+  "fase": {
+   "id": 1,
+   "fase": "Aguardando abertura"
+  },
+  "contratos": [
+   {
+    "id": 5300005326,
+    "numero": "450",
+    "idLicitacao": null,
+    "licitacao": null,
+    "ano": 2026,
+    "empresa": null,
+    "objeto": null,
+    "garantia": null,
+    "status": null,
+    "tipo": null,
+    "inicioVigencia": null,
+    "fimVigencia": null,
+    "valor": null,
+    "valorConsumido": null,
+    "valorRestante": null,
+    "processo": null,
+    "prorrogavelAte": null,
+    "publicacaoDODF": null,
+    "assinadoEm": null,
+    "valorFiscal": null,
+    "gestor": null,
+    "fiscal": null,
+    "area": null,
+    "comprador": null,
+    "anexos": null,
+    "cnpj": null,
+    "CNPJ": null
+   }
+  ],
+  "anexos": []
+ },
+ {
+  "id": 2365,
+  "titulo": "PREGÃO ELETRÔNICO",
+  "numero": "056",
+  "ano": 2026,
+  "objeto": "Registro de Preços para contratação de empresa(s) visando futuras aquisições de equipamentos para o Café BRB, localizado na sua sede no Edifício Centro Empresarial CNC (CECNC)",
+  "realizacao": "2026-08-19T08:00:00",
+  "observacao": "Para acessar o edital, clique abaixo:\nhttps://www.portaldecompraspublicas.com.br/processos/df/brb-banco-de-brasilia-sa-3635/pe-056-2026-2026-499392",
+  "tipo": {
+   "id": 4,
+   "tipo": "pregão"
+  },
+  "fase": {
+   "id": 15,
+   "fase": "Licitação fracassada"
+  },
+  "contratos": [],
+  "anexos": []
+ }
+]

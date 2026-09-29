@@ -1,0 +1,146 @@
+[
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/tramitacaoedital/portal/edital/1b05ff48-33a5-4168-bafd-880e56f06a98/lotes",
+  "status": 401,
+  "content_type": null,
+  "www_authenticate": "Bearer",
+  "len": 0,
+  "text_head": "",
+  "has_json": false
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/tramitacaoedital/portal/edital/1b05ff48-33a5-4168-bafd-880e56f06a98/documentos",
+  "status": 401,
+  "content_type": null,
+  "www_authenticate": "Bearer",
+  "len": 0,
+  "text_head": "",
+  "has_json": false
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/tramitacaoedital/portal/edital/1b05ff48-33a5-4168-bafd-880e56f06a98/instancias",
+  "status": 401,
+  "content_type": null,
+  "www_authenticate": "Bearer",
+  "len": 0,
+  "text_head": "",
+  "has_json": false
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/edital/1b05ff48-33a5-4168-bafd-880e56f06a98/item/listarItensPorEditalPaginado?page=1&pageSize=50",
+  "status": 401,
+  "content_type": null,
+  "www_authenticate": "Bearer",
+  "len": 0,
+  "text_head": "",
+  "has_json": false
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/edital/1b05ff48-33a5-4168-bafd-880e56f06a98/item/vinculados",
+  "status": 401,
+  "content_type": null,
+  "www_authenticate": "Bearer",
+  "len": 0,
+  "text_head": "",
+  "has_json": false
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/edital/1b05ff48-33a5-4168-bafd-880e56f06a98/item/grupos",
+  "status": 401,
+  "content_type": null,
+  "www_authenticate": "Bearer",
+  "len": 0,
+  "text_head": "",
+  "has_json": false
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/edital/documentos/1b05ff48-33a5-4168-bafd-880e56f06a98",
+  "status": 401,
+  "content_type": null,
+  "www_authenticate": "Bearer",
+  "len": 0,
+  "text_head": "",
+  "has_json": false
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/edital/1b05ff48-33a5-4168-bafd-880e56f06a98/documentos",
+  "status": 401,
+  "content_type": null,
+  "www_authenticate": "Bearer",
+  "len": 0,
+  "text_head": "",
+  "has_json": false
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/item/listarItensPorEditalPaginado?IdEdital=1b05ff48-33a5-4168-bafd-880e56f06a98",
+  "status": 204,
+  "content_type": null,
+  "www_authenticate": null,
+  "len": 0,
+  "text_head": "",
+  "has_json": false
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/painelpublicacao/obterDescricaoNumerosEditaisPortal?idsProcessos=1b05ff48-33a5-4168-bafd-880e56f06a98",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "www_authenticate": null,
+  "len": 2,
+  "text_head": "{}",
+  "has_json": true
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/painelpublicacao/listarmodalidadesvinculadasgrupospainelpublicoportal",
+  "status": 401,
+  "content_type": null,
+  "www_authenticate": "Bearer",
+  "len": 0,
+  "text_head": "",
+  "has_json": false
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/painelpublicacao/obterEmpresaMaster",
+  "status": 204,
+  "content_type": null,
+  "www_authenticate": null,
+  "len": 0,
+  "text_head": "",
+  "has_json": false
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/painelpublicacao/listar",
+  "status": 401,
+  "content_type": null,
+  "www_authenticate": "Bearer",
+  "len": 0,
+  "text_head": "",
+  "has_json": false
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/avisoportalpublico/3",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "www_authenticate": null,
+  "len": 3150,
+  "text_head": "{\"Codigo\":3,\"Titulo\":\"Orientações para Cadastro de Pessoa Jurídica\",\"Autor\":\"Rayane Crisostomo\",\"Resumo\":\"Comunicado importante para Fornecedores da Confederação Nacional da Indústria\",\"DataPublicacao\":\"2023-08-24T03:00:00\",\"Materia\":\"<div class=\\\"aviso-desc\\\">\\n<p>Prezados Fornecedores,<br /><br />É com satisfação que convidamos sua empresa a participar dos processos de contratação da Confederação Nacional da Indústria (CNI). Para isso, é essencial que efetuem o cadastro na plataforma <strong>GoBuyer</strong>.</p>\\n<p><strong>Como se inscrever:</strong></p>\\n<ul>\\n<li>Acesse a plataforma GoBuyer e clique no botão <strong>“CADASTRE-SE”</strong> para iniciar o processo de cadastro.</li>\\n</ul>\\n<!-- Botão de Inscrição -->\\n<div style=\\\"padding: 50px;\\\" align=\\\"center\\\"><a class=\\\"a_redirecionamento_cadastro\\\" style=\\\"padding: 10px 25px 12px 25px; font-style: normal; border-radius: 6px; background: #57cd6b; text-align: center; margin: auto;\\\" href=\\\"../../../../sso/Account/NewAccount/cni\\\"> <span class=\\\"span_redirecionamento_cadastro\\\" style=\\\"display: inline-block; color: #f5f5f5; font-family: Helvetica; font-size: 13px; font-weight: bold; margin: 0; text-decoration: none; text-tra",
+  "has_json": true
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/avisoportalpublico/3/anexos",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "www_authenticate": null,
+  "len": 187,
+  "text_head": "[{\"Codigo\":15,\"Titulo\":\"Como Cadastrar Pela Primeira Vez Pessoa Jurídica.pdf\",\"NomeArquivo\":\"Como Cadastrar Pela Primeira Vez Pessoa Jurídica.pdf\",\"CodigoAviso\":3,\"CodigoEmpresa\":1815}]",
+  "has_json": true
+ },
+ {
+  "url": "https://compras.sistemaindustria.com.br/compras/api/manifestacaopublico/1b05ff48-33a5-4168-bafd-880e56f06a98/vigencia",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "www_authenticate": null,
+  "len": 83,
+  "text_head": "{\"EsclarecimentoVigente\":false,\"ImpugnacaoVigente\":false,\"ProcessoEmSineDie\":false}",
+  "has_json": true
+ }
+]

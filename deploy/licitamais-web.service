@@ -1,0 +1,30 @@
+[Unit]
+Description=LicitamAIs - Web Application Server
+After=network.target
+
+[Service]
+Type=simple
+User=licitamais
+Group=licitamais
+WorkingDirectory=/opt/licitamais
+EnvironmentFile=/opt/licitamais/.env
+Environment=PYTHONPATH=/opt/licitamais/src
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/licitamais/.venv/bin/python -m licitamais.api --db ${LICITAMAIS_DB} --porta 8090 --static /opt/licitamais/frontend/dist
+
+Restart=always
+RestartSec=5s
+
+# Hardening basico systemd
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/licitamais/data
+PrivateTmp=true
+
+# Limites de recursos (VPS 2 GB RAM)
+MemoryMax=800M
+MemoryHigh=650M
+
+[Install]
+WantedBy=multi-user.target

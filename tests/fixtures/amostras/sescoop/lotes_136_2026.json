@@ -1,0 +1,31 @@
+{
+ "url": "https://compras.somoscooperativismo.coop.br/compras/api/painelpublicacao/portal/edital/29997048-acc7-4ee3-ae68-361284968ce1/lotes",
+ "status": 200,
+ "resposta": {
+  "Data": [
+   {
+    "Codigo": 50129,
+    "CodigoStatus": 2,
+    "CodigoTipoPregao": 1,
+    "CodigoTipoProcesso": 2,
+    "CodigoLoteProposta": 0,
+    "Cotado": false,
+    "CotadoTabela": false,
+    "Concorrendo": false,
+    "DescricaoStatus": "Fechado",
+    "Interesse": false,
+    "Numero": 1,
+    "Quantidade": 0.0,
+    "Valor": 0.0,
+    "ValorPropostaEqualizada": 0.0,
+    "BloquearProposta": false,
+    "ParticipacaoRestrita": false
+   }
+  ],
+  "Pages": 1,
+  "RowsCount": 1,
+  "Page": 1,
+  "PageSize": 10,
+  "FirstRow": 0
+ }
+}

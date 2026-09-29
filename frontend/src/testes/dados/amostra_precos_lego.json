@@ -1,0 +1,104 @@
+{
+ "n": 10,
+ "min": 6020.0,
+ "q1": 8550.0,
+ "mediana": 83445.0,
+ "q3": 565000.0,
+ "max": 1433650.6,
+ "serie_ano": [],
+ "tipo": "item",
+ "pontos": [
+  {
+   "data": null,
+   "valor": 495600.0,
+   "fornecedor": "POSITIVO TECNOLOGIA S.A. (MATRIZ 48)",
+   "cnpj": "81243735000148",
+   "fonte": "sistema_industria",
+   "processo_id": 2139
+  },
+  {
+   "data": null,
+   "valor": 8550.0,
+   "fornecedor": "POSITIVO TECNOLOGIA S.A. (MATRIZ 48)",
+   "cnpj": "81243735000148",
+   "fonte": "sistema_industria",
+   "processo_id": 2139
+  },
+  {
+   "data": null,
+   "valor": 6720.0,
+   "fornecedor": "POSITIVO TECNOLOGIA S.A. (MATRIZ 48)",
+   "cnpj": "81243735000148",
+   "fonte": "sistema_industria",
+   "processo_id": 2139
+  },
+  {
+   "data": null,
+   "valor": 6020.0,
+   "fornecedor": "POSITIVO TECNOLOGIA S.A. (MATRIZ 48)",
+   "cnpj": "81243735000148",
+   "fonte": "sistema_industria",
+   "processo_id": 2139
+  },
+  {
+   "data": null,
+   "valor": 125970.0,
+   "fornecedor": "POSITIVO TECNOLOGIA S.A. (MATRIZ 48)",
+   "cnpj": "81243735000148",
+   "fonte": "sistema_industria",
+   "processo_id": 2139
+  },
+  {
+   "data": null,
+   "valor": 40920.0,
+   "fornecedor": "POSITIVO TECNOLOGIA S.A. (MATRIZ 48)",
+   "cnpj": "81243735000148",
+   "fonte": "sistema_industria",
+   "processo_id": 2139
+  },
+  {
+   "data": null,
+   "valor": 36000.0,
+   "fornecedor": "POSITIVO TECNOLOGIA S.A. (MATRIZ 48)",
+   "cnpj": "81243735000148",
+   "fonte": "sistema_industria",
+   "processo_id": 2139
+  },
+  {
+   "data": null,
+   "valor": 897999.52,
+   "fornecedor": "POSITIVO TECNOLOGIA S.A. (MATRIZ 48)",
+   "cnpj": "81243735000148",
+   "fonte": "sistema_industria",
+   "processo_id": 2242
+  },
+  {
+   "data": null,
+   "valor": 565000.0,
+   "fornecedor": "ZTec Education Serviços de Treinamento ",
+   "cnpj": "33041713000152",
+   "fonte": "sistema_industria",
+   "processo_id": 2301
+  },
+  {
+   "data": null,
+   "valor": 1433650.6,
+   "fornecedor": "POSITIVO TECNOLOGIA S.A. (MATRIZ 48)",
+   "cnpj": "81243735000148",
+   "fonte": "sistema_industria",
+   "processo_id": 2379
+  }
+ ],
+ "fornecedores": [
+  {
+   "fornecedor": "POSITIVO TECNOLOGIA S.A. (MATRIZ 48)",
+   "cnpj": "81243735000148",
+   "vitorias": 9
+  },
+  {
+   "fornecedor": "ZTec Education Serviços de Treinamento ",
+   "cnpj": "33041713000152",
+   "vitorias": 1
+  }
+ ]
+}

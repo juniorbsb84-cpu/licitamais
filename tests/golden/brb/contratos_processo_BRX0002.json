@@ -1,0 +1,24 @@
+{
+  "contratos": [
+    {
+      "processo_id": "BRB-2024000002",
+      "numero": "CTR-20240001",
+      "data_assinatura": "2024-03-15T10:00:00Z",
+      "vigencia_inicio": "2024-04-01T00:00:00Z",
+      "vigencia_fim": "2025-03-31T23:59:59Z",
+      "valor_global": "987654.32",
+      "fornecedor": {
+        "cnpj": "12345678000190",
+        "nome": "Empresa de Limpeza Ltda"
+      },
+      "objeto": "Servicos de limpeza e conservacao predial",
+      "anexos": [
+        {
+          "nome": "contrato_assinado.pdf",
+          "url": "https://portal.brb.gov.br/arquivos/contrato_000002_2024.pdf",
+          "tipo": "CONTRATO"
+        }
+      ]
+    }
+  ]
+}

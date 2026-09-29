@@ -1,0 +1,50 @@
+{
+ "url": "https://compras.somoscooperativismo.coop.br/compras/api/painelpublicacao/portal/edital/1647acdf-63ac-4a58-92be-6c88ac02fb45/lotes",
+ "status": 200,
+ "resposta": {
+  "Data": [
+   {
+    "Codigo": 49455,
+    "CodigoStatus": 3,
+    "CodigoTipoPregao": 7,
+    "CodigoTipoProcesso": 1,
+    "CodigoLoteProposta": 0,
+    "Cotado": false,
+    "CotadoTabela": false,
+    "Concorrendo": false,
+    "DescricaoStatus": "Pendente",
+    "Interesse": false,
+    "Numero": 1,
+    "Quantidade": 0.0,
+    "Valor": 0.0,
+    "ValorPropostaEqualizada": 0.0,
+    "Itens": [
+     {
+      "Nome": "Contratação de 01 (uma) agência especializada em publicidade e propaganda (CONTRATADA), para prestação de serviços à Unidade Nacional do Serviço Nacional de Aprendizagem do Cooperativismo – SESCOOP (CONTRATANTE), pelo período de 12 (doze) meses, compreendendo o estudo, planejamento, conceituação, concepção, criação, produção, execução, distribuição, acompanhamento, monitoramento e avaliação de ações e materiais de comunicação publicitária e institucional. Será realizado registro de preços para fins de contemplar a participação do Serviço Nacional de Cooperativismo no Distrito Federal.\n",
+      "DescricaoItemEdital": "1.1\tContratação de 01 (uma) agência especializada em publicidade e propaganda (CONTRATADA), para prestação de serviços à Unidade Nacional do Serviço Nacional de Aprendizagem do Cooperativismo – SESCOOP (CONTRATANTE), pelo período de 12 (doze) meses, compreendendo o estudo, planejamento, conceituação, concepção, criação, produção, execução, veiculação, distribuição, acompanhamento, monitoramento e avaliação de ações e materiais de comunicação publicitária e institucional conforme especificações técnicas, condições e exigências estabelecidas neste Termo de Referência – TR e seus anexos. \n1.2\tSerá realizado registro de preços para fins de contemplar a participação do Serviço Nacional de Cooperativismo no Distrito Federal.\n",
+      "CodigoLoteEdital": 49455,
+      "CodigoItemEdital": 51039,
+      "CodigoItem": 261174,
+      "ValorDecrementoIncremento": 0.0,
+      "RequerImpostos": false,
+      "SequencialItem": 1,
+      "QuantidadeItem": 1.0,
+      "Icms": false,
+      "Ipi": false,
+      "CodigoExterno": "f1b28858-e182-4ae0-8b94-b49c015e042a",
+      "DescricaoUnidadeMedida": "SERVIÇO",
+      "Lote": 1,
+      "TagTipoItem": "S"
+     }
+    ],
+    "BloquearProposta": false,
+    "ParticipacaoRestrita": false
+   }
+  ],
+  "Pages": 1,
+  "RowsCount": 1,
+  "Page": 1,
+  "PageSize": 10,
+  "FirstRow": 0
+ }
+}

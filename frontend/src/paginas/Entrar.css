@@ -1,0 +1,35 @@
+.entrar-pagina {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  min-height: calc(100vh - 76px);
+}
+.entrar-capa {
+  background: var(--tinta);
+  color: var(--papel);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 64px max(40px, calc((100vw - var(--container)) / 2 + 24px)) 72px;
+  padding-right: 64px;
+  border-right: 1px solid var(--ouro);
+}
+.entrar-marca { margin: 0 0 24px; font: italic 500 20px/1.35 var(--titulo); color: var(--ouro); max-width: 30ch; }
+.entrar-frase { margin: 0; font: 500 clamp(40px, 5vw, 68px)/1.02 var(--titulo); letter-spacing: -.012em; max-width: 14ch; text-wrap: balance; }
+
+.entrar-lado { display: flex; flex-direction: column; justify-content: center; padding: 64px; max-width: 560px; }
+.entrar-lado h1 { margin: 0 0 12px; font-size: 40px; }
+.entrar-intro { color: var(--grafite); max-width: 40ch; margin: 0 0 36px; line-height: 1.55; }
+.entrar-form { display: grid; gap: 8px; max-width: 400px; }
+.entrar-form label { font-size: 13px; color: var(--grafite); }
+.entrar-form .campo { width: 100%; border: 0; border-bottom: 1px solid var(--tinta); border-radius: 0; padding-inline: 0; font-size: 17px; }
+.entrar-form .campo:focus-visible { outline: none; border-bottom: 2px solid var(--ouro-tinta); }
+.entrar-form .btn { justify-self: start; margin-top: 16px; }
+.entrar-ok { margin: 28px 0 0; padding-left: 14px; border-left: 2px solid var(--ouro); color: var(--tinta); max-width: 40ch; }
+.entrar-erro { margin: 0 0 24px; padding-left: 14px; border-left: 2px solid var(--vermelho); color: var(--vermelho); }
+
+@media (max-width: 860px) {
+  .entrar-pagina { grid-template-columns: 1fr; min-height: 0; }
+  .entrar-capa { padding: 48px 16px 40px; border-right: 0; border-bottom: 1px solid var(--ouro); }
+  .entrar-frase { font-size: 38px; }
+  .entrar-lado { padding: 40px 16px 64px; }
+}

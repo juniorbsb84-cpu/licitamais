@@ -1,0 +1,30 @@
+{
+  "cnpj_orgao": "00360305000104",
+  "coleta": "2026-09-25, 1 req/s, ate 4 tentativas com espera",
+  "janelas_consulta": {
+    "20260101-20260331": {
+      "totalRegistros": 36289,
+      "regs_baixados": 36289
+    },
+    "20260401-20260630": {
+      "totalRegistros": 1687,
+      "regs_baixados": 1687
+    },
+    "20260701-20260731": {
+      "totalRegistros": "204 vazio"
+    },
+    "20260801-20260831": {
+      "totalRegistros": "204 vazio"
+    },
+    "20260901-20260925": {
+      "totalRegistros": "204 vazio"
+    }
+  },
+  "janela_atualizacao_ano": {
+    "totalRegistros": 37976,
+    "nota": "mesmos campos, inclui retificacoes; coleta usa ultimos 10 dias"
+  },
+  "assinados_2026_unicos": 82,
+  "nota_valor": "valorGlobal 0.0 na maioria; adaptador usa valorInicial, valorGlobal so se maior que zero",
+  "nota_data": "filtro de data da API e pela publicacao no PNCP, nao pela assinatura"
+}

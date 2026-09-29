@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+.uv-cache/
+.uv-python/
+.pytest_cache/
+.ruff_cache/
+.testtmp/
+
+# dados e segredos locais
+.env
+data/
+dados/
+*.db
+
+# frontend
+frontend/node_modules/
+frontend/dist/
+frontend/test-results/
+frontend/playwright-report/
+
+# material interno (fica no disco, fora do repositório)
+/loop/
+/plano/
+/design/
+/docs/auditoria_jev_acertos.md
+/docs/auditorias/
+/docs/legal/
+/docs/security-audit/
+/docs/superpowers/
+/ESTADO.md
+/ESTADO_PROJETO.md
+/AGENTS.md
+/CLAUDE.md
+/tests/test_notificador.py
+r38*.txt
+
+# operação desta máquina (caminhos e contas locais)
+/iniciar_site.bat
+/iniciar_bot.bat
+/agendar_coleta.bat
+/link_login.ps1

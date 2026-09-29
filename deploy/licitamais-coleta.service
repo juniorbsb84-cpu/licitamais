@@ -1,0 +1,28 @@
+[Unit]
+Description=LicitamAIs - Coleta e Monitoramento de Editais (Regime Privado)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=licitamais
+Group=licitamais
+WorkingDirectory=/opt/licitamais
+EnvironmentFile=/opt/licitamais/.env
+Environment=PYTHONPATH=/opt/licitamais/src
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/licitamais/.venv/bin/python -m licitamais --trigger cron --db ${LICITAMAIS_DB} --backup-dir ${LICITAMAIS_BACKUP_DIR}
+
+StandardOutput=journal
+StandardError=journal
+TimeoutStartSec=1800
+
+# Hardening basico systemd
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/licitamais/data
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

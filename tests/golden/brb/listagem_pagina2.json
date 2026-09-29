@@ -1,0 +1,48 @@
+{
+  "registros": [
+    {
+      "id": "BRB-2024000003",
+      "numero": "000003/2024",
+      "objeto": "Aquisicao de equipamentos de informatica",
+      "modalidade": "PREGAO_ELETRONICO",
+      "status": "ABERTA",
+      "data_abertura": "2024-03-01T14:00:00Z",
+      "data_encerramento": "2024-03-15T14:00:00Z",
+      "orgao": {
+        "codigo": "003",
+        "nome": "Secretaria de Tecnologia",
+        "cnpj": "00000000000003"
+      },
+      "valor_estimado": "500000.00",
+      "itens": [
+        {
+          "codigo": "ITEM-001",
+          "descricao": "Notebook empresarial i7 16GB 512GB SSD",
+          "quantidade": 20,
+          "valor_unitario": "8500.00",
+          "unidade": "UN"
+        },
+        {
+          "codigo": "ITEM-002",
+          "descricao": "Monitor 24 polegadas Full HD",
+          "quantidade": 20,
+          "valor_unitario": "1200.00",
+          "unidade": "UN"
+        }
+      ],
+      "anexos": [
+        {
+          "nome": "edital_ti.pdf",
+          "url": "https://portal.brb.gov.br/arquivos/edital_ti_000003_2024.pdf",
+          "tipo": "EDITAL"
+        }
+      ]
+    }
+  ],
+  "paginacao": {
+    "pagina_atual": 2,
+    "total_paginas": 3,
+    "total_registros": 5,
+    "tem_proxima": true
+  }
+}

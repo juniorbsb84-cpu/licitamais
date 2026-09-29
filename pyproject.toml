@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "licitamais"
+version = "0.1.0"
+description = "Coleta e consulta de licitações e contratos que ficam fora do PNCP (Sistema S, BRB, cooperativas) e de contratos de TI de estatais."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests>=2.32",
+    "fastapi==0.135.1",
+    "starlette==0.52.1",
+    "pydantic==2.12.5",
+    "uvicorn==0.41.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "httpx>=0.28,<0.29",
+    "ruff>=0.16",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = [
+    "E501",   # linhas longas: o formatador cuida do que importa
+    "B008",   # Depends() em parametro default e o idioma do FastAPI
+    "UP042",  # (str, Enum) -> StrEnum muda str(); manter
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["B011", "B017"]

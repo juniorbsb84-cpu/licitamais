@@ -1,0 +1,1410 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "LicitamAIs API",
+    "version": "2"
+  },
+  "paths": {
+    "/api/v2/me": {
+      "get": {
+        "summary": "Me",
+        "operationId": "me_api_v2_me_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Conta"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/auth/link": {
+      "post": {
+        "summary": "Pedir Link",
+        "operationId": "pedir_link_api_v2_auth_link_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PedidoLink"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "202": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Pedir Link Api V2 Auth Link Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/auth/entrar": {
+      "get": {
+        "summary": "Confirmar Entrada",
+        "operationId": "confirmar_entrada_api_v2_auth_entrar_get",
+        "parameters": [
+          {
+            "name": "t",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "T"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Entrar",
+        "operationId": "entrar_api_v2_auth_entrar_post",
+        "parameters": [
+          {
+            "name": "t",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "T"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/auth/sair": {
+      "post": {
+        "summary": "Sair",
+        "operationId": "sair_api_v2_auth_sair_post",
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/api/v2/licitacoes": {
+      "get": {
+        "summary": "Listar",
+        "operationId": "listar_api_v2_licitacoes_get",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "maxLength": 100,
+              "default": "",
+              "title": "Q"
+            }
+          },
+          {
+            "name": "situacao",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "aberta",
+                  "andamento",
+                  "suspensa",
+                  "encerrada",
+                  "cancelada",
+                  "desconhecida"
+                ],
+                "type": "string"
+              },
+              "maxItems": 10,
+              "default": [],
+              "title": "Situacao"
+            }
+          },
+          {
+            "name": "fonte",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 10,
+              "default": [],
+              "title": "Fonte"
+            }
+          },
+          {
+            "name": "modalidade",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 100
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Modalidade"
+            }
+          },
+          {
+            "name": "abertura_de",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Abertura De"
+            }
+          },
+          {
+            "name": "abertura_ate",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Abertura Ate"
+            }
+          },
+          {
+            "name": "ordem",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "relevancia",
+                    "prazo",
+                    "abertura"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Ordem"
+            }
+          },
+          {
+            "name": "pagina",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "title": "Pagina"
+            }
+          },
+          {
+            "name": "por_pagina",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 50,
+              "minimum": 1,
+              "default": 20,
+              "title": "Por Pagina"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaginaLicitacoes"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/licitacoes/{pid}": {
+      "get": {
+        "summary": "Detalhe",
+        "operationId": "detalhe_api_v2_licitacoes__pid__get",
+        "parameters": [
+          {
+            "name": "pid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Pid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LicitacaoDetalhe"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/evidencias": {
+      "get": {
+        "summary": "Evidencias",
+        "operationId": "evidencias_api_v2_evidencias_get",
+        "parameters": [
+          {
+            "name": "ids",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              },
+              "maxItems": 50,
+              "title": "Ids"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": true
+                  },
+                  "title": "Response Evidencias Api V2 Evidencias Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/precos": {
+      "get": {
+        "summary": "Precos",
+        "operationId": "precos_api_v2_precos_get",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100,
+              "title": "Q"
+            }
+          },
+          {
+            "name": "tipo",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "enum": [
+                "contrato",
+                "item"
+              ],
+              "type": "string",
+              "default": "contrato",
+              "title": "Tipo"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Precos Api V2 Precos Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/resumo": {
+      "get": {
+        "summary": "Resumo",
+        "operationId": "resumo_api_v2_resumo_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Resumo Api V2 Resumo Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/alertas": {
+      "get": {
+        "summary": "Listar",
+        "operationId": "listar_api_v2_alertas_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "additionalProperties": true,
+                    "type": "object"
+                  },
+                  "type": "array",
+                  "title": "Response Listar Api V2 Alertas Get"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar",
+        "operationId": "criar_api_v2_alertas_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NovoAlerta"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Criar Api V2 Alertas Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/alertas/{aid}": {
+      "delete": {
+        "summary": "Apagar",
+        "operationId": "apagar_api_v2_alertas__aid__delete",
+        "parameters": [
+          {
+            "name": "aid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Aid"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/conta/telegram": {
+      "post": {
+        "summary": "Telegram",
+        "operationId": "telegram_api_v2_conta_telegram_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Telegram Api V2 Conta Telegram Post"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/operador/saude": {
+      "get": {
+        "summary": "Saude",
+        "operationId": "saude_api_v2_operador_saude_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Saude Api V2 Operador Saude Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Arquivo": {
+        "properties": {
+          "nome": {
+            "type": "string",
+            "title": "Nome"
+          },
+          "url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Url"
+          }
+        },
+        "type": "object",
+        "required": [
+          "nome",
+          "url"
+        ],
+        "title": "Arquivo"
+      },
+      "Conta": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "email": {
+            "type": "string",
+            "title": "Email"
+          },
+          "operador": {
+            "type": "boolean",
+            "title": "Operador"
+          },
+          "csrf": {
+            "type": "string",
+            "title": "Csrf"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "email",
+          "operador",
+          "csrf"
+        ],
+        "title": "Conta"
+      },
+      "Contrato": {
+        "properties": {
+          "numero": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Numero"
+          },
+          "fornecedor": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fornecedor"
+          },
+          "cnpj": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cnpj"
+          },
+          "valor": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Valor"
+          },
+          "assinatura": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Assinatura"
+          },
+          "vigencia_inicio": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Vigencia Inicio"
+          },
+          "vigencia_fim": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Vigencia Fim"
+          }
+        },
+        "type": "object",
+        "required": [
+          "numero",
+          "fornecedor",
+          "cnpj",
+          "valor",
+          "assinatura",
+          "vigencia_inicio",
+          "vigencia_fim"
+        ],
+        "title": "Contrato"
+      },
+      "Fase": {
+        "properties": {
+          "rotulo": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rotulo"
+          },
+          "inicio": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Inicio"
+          },
+          "fim": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fim"
+          }
+        },
+        "type": "object",
+        "required": [
+          "rotulo",
+          "inicio",
+          "fim"
+        ],
+        "title": "Fase"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Item": {
+        "properties": {
+          "descricao": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Descricao"
+          },
+          "quantidade": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Quantidade"
+          },
+          "unidade": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Unidade"
+          },
+          "valor_estimado": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Valor Estimado"
+          }
+        },
+        "type": "object",
+        "required": [
+          "descricao",
+          "quantidade",
+          "unidade",
+          "valor_estimado"
+        ],
+        "title": "Item"
+      },
+      "LicitacaoDetalhe": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "fonte": {
+            "type": "string",
+            "title": "Fonte"
+          },
+          "numero": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Numero"
+          },
+          "objeto": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Objeto"
+          },
+          "modalidade": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Modalidade"
+          },
+          "orgao": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Orgao"
+          },
+          "abertura": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Abertura"
+          },
+          "situacao": {
+            "type": "string",
+            "enum": [
+              "aberta",
+              "andamento",
+              "suspensa",
+              "encerrada",
+              "cancelada",
+              "desconhecida"
+            ],
+            "title": "Situacao"
+          },
+          "rotulo": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rotulo"
+          },
+          "dias_para_abertura": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dias Para Abertura"
+          },
+          "publicacao": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Publicacao"
+          },
+          "criterio": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Criterio"
+          },
+          "homologacao": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Homologacao"
+          },
+          "link_origem": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/LinkOrigem"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "fases": {
+            "items": {
+              "$ref": "#/components/schemas/Fase"
+            },
+            "type": "array",
+            "title": "Fases"
+          },
+          "contratos": {
+            "items": {
+              "$ref": "#/components/schemas/Contrato"
+            },
+            "type": "array",
+            "title": "Contratos"
+          },
+          "vencedores": {
+            "items": {
+              "$ref": "#/components/schemas/Vencedor"
+            },
+            "type": "array",
+            "title": "Vencedores"
+          },
+          "itens": {
+            "items": {
+              "$ref": "#/components/schemas/Item"
+            },
+            "type": "array",
+            "title": "Itens"
+          },
+          "arquivos": {
+            "items": {
+              "$ref": "#/components/schemas/Arquivo"
+            },
+            "type": "array",
+            "title": "Arquivos"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "fonte",
+          "numero",
+          "objeto",
+          "modalidade",
+          "orgao",
+          "abertura",
+          "situacao",
+          "rotulo",
+          "dias_para_abertura",
+          "publicacao",
+          "criterio",
+          "homologacao",
+          "fases",
+          "contratos",
+          "vencedores",
+          "itens",
+          "arquivos"
+        ],
+        "title": "LicitacaoDetalhe"
+      },
+      "LicitacaoResumo": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "fonte": {
+            "type": "string",
+            "title": "Fonte"
+          },
+          "numero": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Numero"
+          },
+          "objeto": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Objeto"
+          },
+          "modalidade": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Modalidade"
+          },
+          "orgao": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Orgao"
+          },
+          "abertura": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Abertura"
+          },
+          "situacao": {
+            "type": "string",
+            "enum": [
+              "aberta",
+              "andamento",
+              "suspensa",
+              "encerrada",
+              "cancelada",
+              "desconhecida"
+            ],
+            "title": "Situacao"
+          },
+          "rotulo": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rotulo"
+          },
+          "dias_para_abertura": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dias Para Abertura"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "fonte",
+          "numero",
+          "objeto",
+          "modalidade",
+          "orgao",
+          "abertura",
+          "situacao",
+          "rotulo",
+          "dias_para_abertura"
+        ],
+        "title": "LicitacaoResumo"
+      },
+      "LinkOrigem": {
+        "properties": {
+          "url": {
+            "type": "string",
+            "title": "Url"
+          },
+          "tipo": {
+            "type": "string",
+            "enum": [
+              "processo",
+              "edital",
+              "lista"
+            ],
+            "title": "Tipo"
+          },
+          "rotulo": {
+            "type": "string",
+            "title": "Rotulo"
+          }
+        },
+        "type": "object",
+        "required": [
+          "url",
+          "tipo",
+          "rotulo"
+        ],
+        "title": "LinkOrigem"
+      },
+      "NovoAlerta": {
+        "properties": {
+          "palavras": {
+            "items": {
+              "type": "string",
+              "maxLength": 40,
+              "minLength": 2
+            },
+            "type": "array",
+            "maxItems": 10,
+            "minItems": 1,
+            "title": "Palavras"
+          }
+        },
+        "type": "object",
+        "required": [
+          "palavras"
+        ],
+        "title": "NovoAlerta"
+      },
+      "PaginaLicitacoes": {
+        "properties": {
+          "itens": {
+            "items": {
+              "$ref": "#/components/schemas/LicitacaoResumo"
+            },
+            "type": "array",
+            "title": "Itens"
+          },
+          "total": {
+            "type": "integer",
+            "title": "Total"
+          },
+          "pagina": {
+            "type": "integer",
+            "title": "Pagina"
+          },
+          "por_pagina": {
+            "type": "integer",
+            "title": "Por Pagina"
+          },
+          "facetas": {
+            "additionalProperties": {
+              "additionalProperties": {
+                "type": "integer"
+              },
+              "type": "object"
+            },
+            "type": "object",
+            "title": "Facetas"
+          }
+        },
+        "type": "object",
+        "required": [
+          "itens",
+          "total",
+          "pagina",
+          "por_pagina",
+          "facetas"
+        ],
+        "title": "PaginaLicitacoes"
+      },
+      "PedidoLink": {
+        "properties": {
+          "email": {
+            "type": "string",
+            "title": "Email"
+          }
+        },
+        "type": "object",
+        "required": [
+          "email"
+        ],
+        "title": "PedidoLink"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "Vencedor": {
+        "properties": {
+          "item": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Item"
+          },
+          "fornecedor": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fornecedor"
+          },
+          "cnpj": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cnpj"
+          },
+          "quantidade": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Quantidade"
+          },
+          "valor": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Valor"
+          }
+        },
+        "type": "object",
+        "required": [
+          "item",
+          "fornecedor",
+          "cnpj",
+          "quantidade",
+          "valor"
+        ],
+        "title": "Vencedor"
+      }
+    }
+  }
+}

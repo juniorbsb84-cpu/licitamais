@@ -1,0 +1,27 @@
+{
+ "url": "https://compras.sistemaindustria.com.br/compras/api/salaDisputaPublica/898a7f61-4e1b-46e6-89be-4477468a3b5c/listarSalaDisputaPublica?IdEdital=898a7f61-4e1b-46e6-89be-4477468a3b5c",
+ "status": 200,
+ "resposta": {
+  "Data": [
+   {
+    "Codigo": 46579,
+    "CodigoStatus": 2,
+    "CodigoTipoProcesso": 1,
+    "DescricaoStatus": "Fechado",
+    "Nome": "ASSESSORIA EM TRANSPORTE",
+    "Numero": 1,
+    "Paralisado": false,
+    "ValorMelhorLance": 1150000.0,
+    "StatusLei123": 1,
+    "DescricaoStatusLei123": "Não Verificado",
+    "CodigoExterno": "454ef71b-472e-4d1e-90f9-935feb110980",
+    "ParticipacaoRestrita": false
+   }
+  ],
+  "Pages": 1,
+  "RowsCount": 1,
+  "Page": 1,
+  "PageSize": 10,
+  "FirstRow": 0
+ }
+}

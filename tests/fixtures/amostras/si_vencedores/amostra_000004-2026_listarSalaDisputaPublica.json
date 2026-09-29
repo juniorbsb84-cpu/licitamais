@@ -1,0 +1,27 @@
+{
+ "url": "https://compras.sistemaindustria.com.br/compras/api/salaDisputaPublica/1b05ff48-33a5-4168-bafd-880e56f06a98/listarSalaDisputaPublica?IdEdital=1b05ff48-33a5-4168-bafd-880e56f06a98",
+ "status": 200,
+ "resposta": {
+  "Data": [
+   {
+    "Codigo": 49585,
+    "CodigoStatus": 2,
+    "CodigoTipoProcesso": 1,
+    "DescricaoStatus": "Fechado",
+    "Nome": "PRODUCAO DE EVENTOS",
+    "Numero": 1,
+    "Paralisado": false,
+    "ValorMelhorLance": 10655957.09,
+    "StatusLei123": 1,
+    "DescricaoStatusLei123": "Não Verificado",
+    "CodigoExterno": "04df75f4-fdbf-4698-a321-b413014397ca",
+    "ParticipacaoRestrita": false
+   }
+  ],
+  "Pages": 1,
+  "RowsCount": 1,
+  "Page": 1,
+  "PageSize": 10,
+  "FirstRow": 0
+ }
+}

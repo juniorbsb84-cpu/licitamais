@@ -1,0 +1,45 @@
+"""Interface publica do protocolo de adaptadores."""
+
+from licitamais.adapter import Adapter
+from licitamais.types import (
+    AttachmentRecord,
+    AwardRecord,
+    Capabilities,
+    ContractRecord,
+    FetchedPage,
+    FetchFailure,
+    FetchRequest,
+    ItemRecord,
+    NormalizedBatch,
+    OrgRecord,
+    ParseResult,
+    PhaseRecord,
+    PlanContext,
+    ProcessRecord,
+    QuarantineItem,
+    ResultRecord,
+    Session,
+    SourceConfig,
+)
+
+__all__ = [
+    "Adapter",
+    "AttachmentRecord",
+    "AwardRecord",
+    "Capabilities",
+    "ContractRecord",
+    "FetchFailure",
+    "FetchedPage",
+    "FetchRequest",
+    "ItemRecord",
+    "NormalizedBatch",
+    "OrgRecord",
+    "ParseResult",
+    "PhaseRecord",
+    "PlanContext",
+    "ProcessRecord",
+    "QuarantineItem",
+    "ResultRecord",
+    "Session",
+    "SourceConfig",
+]

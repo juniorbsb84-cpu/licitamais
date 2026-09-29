@@ -1,0 +1,34 @@
+{
+ "capturado_em": "2026-09-23T21:22:17Z",
+ "origem": "navegador no portal publico (curl puro recebe 403 mesmo com o token; o navegador passa)",
+ "handshake": [
+  "GET /compras/app/portalpublico",
+  "GET /compras/api/csrf/token",
+  "header X-XSRF-TOKEN url-decoded + Content-Type application/json; charset=utf-8 + cookies da sessao"
+ ],
+ "listagem": {
+  "url": "/compras/api/painelpublicacao/listarpaginadoritensgrupospainelpublicacaoportal?page=1&pages=0&pageIndex=0&pageSize=8&length=0&options=5&options=8&options=10",
+  "nota": "devolve SO os Ids (demais campos zerados); RowsCount/Pages sao o total real",
+  "resposta": {
+   "Data": [
+    {"Id": "4a4d454e-5874-45c6-a41c-4a00268c9fca", "Publicado": false, "CodigoModalidade": 0, "DataCriacao": "0001-01-01T00:00:00", "Contratos": []},
+    {"Id": "5983f86a-cd8a-42d0-93f7-8639a52f808b", "Publicado": false, "CodigoModalidade": 0, "DataCriacao": "0001-01-01T00:00:00", "Contratos": []},
+    {"Id": "3f2a84b4-ce1c-4bd6-9e6e-0c415ba493c4", "Publicado": false, "CodigoModalidade": 0, "DataCriacao": "0001-01-01T00:00:00", "Contratos": []}
+   ],
+   "Pages": 37, "RowsCount": 294, "Page": 1, "PageSize": 8, "FirstRow": 0
+  }
+ },
+ "detalhe": {
+  "url": "/compras/api/painelpublicacao/listaritensgrupospainelpublicacaoporempresamaster?page=1&pages=0&pageIndex=0&pageSize=10&length=0&options=5&options=10&IdsEdital=<id>&IdsEdital=<id>",
+  "nota": "lista de objetos (nao envelope) com os campos do processo para os Ids pedidos",
+  "resposta": [
+   {"Codigo": 23274, "Id": "3f2a84b4-ce1c-4bd6-9e6e-0c415ba493c4", "NumeroProcesso": "000074/2026", "Objeto": "O objeto desta seleção com disputa é contratação de empresa especializada em desenvolvimento, \nmanutenção, sustentação tecnológica e suporte técnico de sistemas corporativos do SESI, incluindo \nmanutenção corretiva e evolutiva, desenvolvimento de funcionalidades, integrações e suporte aos \nusuários.   ", "DataAbertura": "2026-09-28T09:59:00", "SineDie": false, "CodigoModalidade": 5871, "Modalidade": "Seleção Disputa Aberta", "NomeEmpresa": "SESI", "IdGrupo": "d90e4bec-68cd-4457-895b-b008cf7c6902", "TituloGrupo": "Em registro de proposta", "QuantidadeDocumentosPublicados": 1, "QuantidadeItensVinculados": 0, "RotaDetalhamento": "/edital/*/itens", "NumeroEdital": "000074/2026", "CodigoStatusEdital": 35, "DescricaoStatusEdital": "Em Registro de Proposta", "DataExibicaoPainelPublico": "2026-09-28T09:59:00", "DataAberturaLimiteProposta": "0001-01-01T00:00:00", "TempoRestante": "4d 15h"},
+   {"Codigo": 23270, "Id": "5983f86a-cd8a-42d0-93f7-8639a52f808b", "NumeroProcesso": "000072/2026", "Objeto": "Contratação de empresa especializada para a prestação de serviços de fornecimento de solução de Gerenciamento de Acessos Privilegiados (Privileged Access Management – PAM)", "DataAbertura": "2026-09-29T08:59:00", "SineDie": false, "CodigoModalidade": 5871, "Modalidade": "Seleção Disputa Aberta", "NomeEmpresa": "CNI", "IdGrupo": "d90e4bec-68cd-4457-895b-b008cf7c6902", "TituloGrupo": "Em registro de proposta", "QuantidadeDocumentosPublicados": 1, "QuantidadeItensVinculados": 0, "RotaDetalhamento": "/edital/*/itens", "NumeroEdital": "000072/2026", "CodigoStatusEdital": 35, "DescricaoStatusEdital": "Em Registro de Proposta", "DataExibicaoPainelPublico": "2026-09-29T08:59:00", "DataAberturaLimiteProposta": "0001-01-01T00:00:00", "TempoRestante": "5d 14h"},
+   {"Codigo": 23286, "Id": "4a4d454e-5874-45c6-a41c-4a00268c9fca", "NumeroProcesso": "000075/2026", "Objeto": "Contratação de empresa especializada no fornecimento de papéis, contratação no formato registro de preços.", "DataAbertura": "2026-09-29T09:59:00", "SineDie": false, "CodigoModalidade": 5871, "Modalidade": "Seleção Disputa Aberta", "NomeEmpresa": "CNI", "IdGrupo": "d90e4bec-68cd-4457-895b-b008cf7c6902", "TituloGrupo": "Em registro de proposta", "QuantidadeDocumentosPublicados": 1, "QuantidadeItensVinculados": 0, "RotaDetalhamento": "/edital/*/itens", "NumeroEdital": "000075/2026", "CodigoStatusEdital": 35, "DescricaoStatusEdital": "Em Registro de Proposta", "DataExibicaoPainelPublico": "2026-09-29T09:59:00", "DataAberturaLimiteProposta": "0001-01-01T00:00:00", "TempoRestante": "5d 15h"}
+  ]
+ },
+ "descricao": {
+  "url": "/compras/api/painelpublicacao/obterDescricaoNumerosEditaisPortal?idsProcessos=<id>",
+  "resposta": {"4a4d454e-5874-45c6-a41c-4a00268c9fca": "Número Chamamento Público", "5983f86a-cd8a-42d0-93f7-8639a52f808b": "Número Chamamento Público"}
+ }
+}

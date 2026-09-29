@@ -1,0 +1,15 @@
+[Unit]
+Description=LicitamAIs - Disparo Agendado de Coleta diaria (12:00)
+After=network-online.target
+
+[Timer]
+# Dispara todo dia as 12:00
+OnCalendar=*-*-* 12:00:00
+# Se o servidor estiver desligado no horario, roda assim que iniciar
+Persistent=true
+# Dispersao aleatoria de 30s para evitar pico exato se houver multiplas instancias
+RandomizedDelaySec=30s
+Unit=licitamais-coleta.service
+
+[Install]
+WantedBy=timers.target
